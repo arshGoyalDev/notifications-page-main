@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  /* Primary */
+
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+
+  /* Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+/* globals */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* body */
+
+body {
+  min-height: 100vh;
+  background: var(--very-light-grayish-blue);
+}
+
+/* container */
+
+.container {
+  padding: 30px 20px;
+  width: 100vw;
+  background: var(--white);
+}
+
+/* header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.unread-num {
+  color: var(--white);
+  font-weight: 700;
+  padding: 4px 15px 5px 15px;
+  background: var(--blue);
+  border-radius: 7px;
+}
+
+.mark-read-btn {
+  color: var(--grayish-blue);
+  font-size: 18px;
+  font-weight: 600;
+  background: transparent;
+  border: 0;
+  transition: color 0.3s;
+}
+
+.mark-read-btn:hover {
+  color: var(--blue);
+}
+
+.mark-read-btn:focus {
+  outline: none;
+}
