@@ -1,0 +1,30 @@
+/* for devices having width 700px or more */
+
+@media (min-width: 700px) {
+  /* body */
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* container */
+
+  .container {
+    width: 80vw;
+    border-radius: 20px;
+    padding: 40px 35px;
+    max-height: 85vh;
+  }
+}
+
+/* for devices having width 1000px or more */
+
+@media (min-width: 1000px) {
+  /* container */
+
+  .container {
+    width: 900px;
+  }
+}
