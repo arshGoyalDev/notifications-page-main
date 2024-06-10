@@ -45,16 +45,16 @@ a {
 
 ::-webkit-scrollbar {
   width: 4px;
-}  
+}
 
 ::-webkit-scrollbar-track {
   background: var(--white);
-}  
+}
 
 ::-webkit-scrollbar-thumb {
   background: var(--grayish-blue);
   border: 10px;
-}  
+}
 
 /* body */
 
@@ -136,6 +136,10 @@ body {
   cursor: default;
 }
 
+.notification.read {
+  background: transparent;
+}
+
 .user-image img {
   width: 50px;
 }
@@ -177,10 +181,15 @@ body {
   display: inline-block;
   width: 8px;
   height: 8px;
-  margin: 0 0 2px 5px;
-
   background: var(--red);
   border-radius: 20px;
+  margin: 0 0 2px 5px;
+}
+
+.unread-marker.read {
+  opacity: 0;
+  visibility: hidden;
+  /* display: hidden; */
 }
 
 .noti-time {

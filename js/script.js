@@ -2,15 +2,17 @@ let notiContainer = document.querySelector(".noti-container");
 
 const checkForRead = function (element) {
   if (!element.readStatus) {
-    return "<div class='unread-marker'></div>";
+    return "unread";
   } else {
-    return "";
+    return "read";
   }
 };
 
 const loadNotifications = function () {
   Object.keys(notiData).forEach((e) => {
-    notiContainer.innerHTML += ` <div class="notification ${styleReadClass(notiData[e])}">
+    notiContainer.innerHTML += ` <div class="notification ${checkForRead(
+      notiData[e]
+    )}">
       <div class="user-image">
         <img
           src="./assets/images/avatar-${notiData[e].userImage}.webp"
@@ -21,8 +23,11 @@ const loadNotifications = function () {
         <div class="noti-title">
           <a href="./" class="user-name">${notiData[e].userName}</a>
           ${notiData[e].notiTitle}
-          <a href="./" class="highlighted-part">${notiData[e].highlightedPart}</a>
-          ${checkForRead(notiData[e])}
+          <a href="./" class="highlighted-part">${
+            notiData[e].highlightedPart
+          }</a>
+          
+          <div class='unread-marker ${checkForRead(notiData[e])}'></div>
         </div>
         <span class="noti-time">${notiData[e].notiTime}</span>
       </div>
