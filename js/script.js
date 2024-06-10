@@ -8,28 +8,37 @@ const checkForRead = function (element) {
   }
 };
 
+const checkForMessage = function (element) {
+  if (element.message !== "") {
+    return `<a href="./"><div class='message'>${element.message}</div></a>`;
+  } else {
+    return "";
+  }
+};
+
 const loadNotifications = function () {
   Object.keys(notiData).forEach((e) => {
-    notiContainer.innerHTML += ` <div class="notification ${checkForRead(
-      notiData[e]
-    )}">
+    notiContainer.innerHTML += ` 
+    <div class="notification ${checkForRead(notiData[e])}">
       <div class="user-image">
-        <img
-          src="./assets/images/avatar-${notiData[e].userImage}.webp"
-          alt="Mark Webber"
-        />
+        <a href="./">
+          <img
+            src="./assets/images/avatar-${notiData[e].userImage}.webp"
+            alt="${notiData[e].userName}"
+          />
+      </a>
       </div>
-      <div class="noti-details">
+        <div class="noti-details">
         <div class="noti-title">
           <a href="./" class="user-name">${notiData[e].userName}</a>
           ${notiData[e].notiTitle}
           <a href="./" class="highlighted-part">${
             notiData[e].highlightedPart
           }</a>
-          
           <div class='unread-marker ${checkForRead(notiData[e])}'></div>
         </div>
         <span class="noti-time">${notiData[e].notiTime}</span>
+        ${checkForMessage(notiData[e])}
       </div>
     </div>`;
   });
