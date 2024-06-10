@@ -28,6 +28,10 @@
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* body */
 
 body {
@@ -85,4 +89,79 @@ body {
 
 .mark-read-btn:focus {
   outline: none;
+}
+
+/* notifications container */
+
+.noti-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.notification {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: var(--very-light-grayish-blue);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor:default;
+}
+
+/* .notification:hover {
+} */
+
+.user-image img {
+  width: 50px;
+}
+
+.noti-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.noti-title {
+  color: var(--grayish-blue);
+  font-weight: 500;
+}
+
+.noti-title .user-name {
+  color: var(--very-dark-blue);
+  font-weight: 900;
+  margin: 0 5px 0 0;
+  transition: color 0.3s;
+}
+
+.user-name:hover {
+  color: var(--blue);
+}
+
+.noti-title .highlighted-part {
+  color: var(--dark-grayish-blue);
+  font-weight: 900;
+  margin: 0 0 0 5px;
+  transition: color 0.3s;
+}
+
+.highlighted-part:hover {
+  color: var(--blue);
+}
+
+.unread-marker {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 0 2px 5px;
+
+  background: var(--red);
+  border-radius: 20px;
+}
+
+.noti-time {
+  /* color: var(--light-grayish-blue-2); */
+  color: var(--grayish-blue);
+  /* font-size: 14px; */
 }

@@ -16,6 +16,7 @@
     border-radius: 20px;
     padding: 40px 35px;
     max-height: 85vh;
+    box-shadow: var(--light-grayish-blue-2) 0 8px 24px;
   }
 }
 
@@ -26,5 +27,11 @@
 
   .container {
     width: 900px;
+  }
+
+  /* notifications */
+
+  .notification {
+    padding: 30px;
   }
 }

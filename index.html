@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <!-- css -->
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/querries.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- js -->
-  <script defer src="./js/script.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/querries.css" />
 
-  <title>Frontend Mentor | Notifications page</title>
-</head>
-<body>
+    <!-- js -->
+    <script defer src="./js/script.js"></script>
 
-  <main class="container">
-    <header class="header">
-      <div class="heading-container">
-        <h1 class="heading">Notifications</h1>
-        <p class="unread-num">3</p>
-      </div>
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <div class="heading-container">
+          <h1 class="heading">Notifications</h1>
+          <p class="unread-num">3</p>
+        </div>
 
-      <button class="mark-read-btn">Mark all as read</button>
-    </header>
-  </main>
+        <button class="mark-read-btn">Mark all as read</button>
+      </header>
+      <section class="noti-container">
+        <div class="notification">
+          <div class="user-image">
+            <img
+              src="./assets/images/avatar-mark-webber.webp"
+              alt="Mark Webber"
+            />
+          </div>
+          <div class="noti-details">
+            <div class="noti-title">
+              <a href="./" class="user-name"> Mark Webber </a>
+              reacted to your recent post
+              <a href="./" class="highlighted-part"> My first tournament today! </a>
+              <div class="unread-marker"></div>
+            </div>
+            <span class="noti-time"> 1m ago </span>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <!-- Notifications 3
+    <!-- Notifications 3
 
   Mark all as read
 
@@ -54,5 +77,5 @@
 
   Anna Kim left the group Chess Club
   2 weeks ago -->
-</body>
+  </body>
 </html>
