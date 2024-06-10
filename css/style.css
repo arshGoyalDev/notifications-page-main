@@ -32,6 +32,30 @@ a {
   text-decoration: none;
 }
 
+/* scrollbar */
+
+/* firefox */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--grayish-blue) var(--white);
+}
+
+/* chromium based browsers */
+
+::-webkit-scrollbar {
+  width: 4px;
+}  
+
+::-webkit-scrollbar-track {
+  background: var(--white);
+}  
+
+::-webkit-scrollbar-thumb {
+  background: var(--grayish-blue);
+  border: 10px;
+}  
+
 /* body */
 
 body {
@@ -95,9 +119,11 @@ body {
 
 .noti-container {
   display: flex;
+  max-height: calc(100vh - 120px);
   flex-direction: column;
   gap: 10px;
   margin-top: 30px;
+  overflow: auto;
 }
 
 .notification {
@@ -107,7 +133,7 @@ body {
   background: var(--very-light-grayish-blue);
   border-radius: 10px;
   transition: 0.3s;
-  cursor:default;
+  cursor: default;
 }
 
 .user-image img {
