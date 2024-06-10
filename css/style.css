@@ -32,6 +32,10 @@ a {
   text-decoration: none;
 }
 
+.hidden {
+  display: none;
+}
+
 /* scrollbar */
 
 /* firefox */
@@ -126,6 +130,8 @@ body {
   overflow: auto;
 }
 
+/* notification */
+
 .notification {
   display: flex;
   gap: 20px;
@@ -144,15 +150,17 @@ body {
   width: 50px;
 }
 
-.noti-details {
+.noti-info {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
 }
 
 .noti-title {
   color: var(--grayish-blue);
   font-weight: 500;
+  margin-bottom: 5px;
 }
 
 .noti-title .user-name {
@@ -189,7 +197,6 @@ body {
 .unread-marker.read {
   opacity: 0;
   visibility: hidden;
-  /* display: hidden; */
 }
 
 .noti-time {
@@ -202,11 +209,15 @@ body {
   padding: 15px;
   border: 2px solid var(--light-grayish-blue-2);
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
   transition: 0.3s;
 }
 
 .message:hover {
   background: var(--light-grayish-blue-1);
   border: 2px solid var(--light-grayish-blue-1);
+}
+
+.noti-picture img {
+  width: 45px;
 }

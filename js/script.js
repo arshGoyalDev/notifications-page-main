@@ -1,5 +1,7 @@
 let notiContainer = document.querySelector(".noti-container");
 
+// func() for checking if notification is read
+
 const checkForRead = function (element) {
   if (!element.readStatus) {
     return "unread";
@@ -8,13 +10,17 @@ const checkForRead = function (element) {
   }
 };
 
-const checkForMessage = function (element) {
-  if (element.message !== "") {
-    return `<a href="./"><div class='message'>${element.message}</div></a>`;
-  } else {
+// a func() to check for picture or message
+
+const checkFor = function (element) {
+  if (element !== "") {
     return "";
+  } else {
+    return "hidden";
   }
 };
+
+// func() to load messages
 
 const loadNotifications = function () {
   Object.keys(notiData).forEach((e) => {
@@ -28,21 +34,28 @@ const loadNotifications = function () {
           />
       </a>
       </div>
-        <div class="noti-details">
-        <div class="noti-title">
-          <a href="./" class="user-name">${notiData[e].userName}</a>
-          ${notiData[e].notiTitle}
-          <a href="./" class="highlighted-part">${
-            notiData[e].highlightedPart
-          }</a>
-          <div class='unread-marker ${checkForRead(notiData[e])}'></div>
-        </div>
-        <span class="noti-time">${notiData[e].notiTime}</span>
-        ${checkForMessage(notiData[e])}
+      <div class="noti-info">
+      <div class="noti-details">
+      <div class="noti-title">
+        <a href="./" class="user-name">${notiData[e].userName}</a>
+        ${notiData[e].notiTitle}
+        <a href="./" class="highlighted-part">${notiData[e].highlightedPart}</a>
+        <div class='unread-marker ${checkForRead(notiData[e])}'></div>
+      </div>
+      <span class="noti-time">${notiData[e].notiTime}</span>
+      <a href="./" class="${checkFor(
+        notiData[e].message
+      )}"><div class='message'>${notiData[e].message}</div></a>
+    </div>
+    <div class="noti-picture ${checkFor(notiData[e].picture)}"><img src="${
+      notiData[e].picture
+    }" alt="chess"></div>
       </div>
     </div>`;
   });
 };
+
+// notifications data
 
 let notiData = {
   notification1: {
