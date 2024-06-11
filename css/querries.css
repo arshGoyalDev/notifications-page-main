@@ -1,3 +1,16 @@
+/* for devices having width 374px or less */
+
+@media (max-width: 374px) {
+  /* header */
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+}
+
 /* for devices having width 700px or more */
 
 @media (min-width: 700px) {
@@ -24,7 +37,7 @@
   .noti-container {
     max-height: calc(85vh - 140px);
   }
-  
+
   .message {
     padding: 20px;
   }
