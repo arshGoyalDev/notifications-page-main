@@ -22,8 +22,7 @@ notiSet.forEach((noti) => {
     if (noti.classList.contains("unread")) {
       markRead(noti, 1);
     } else {
-      alert("Already Marked");
-      // return;
+      alert("Already Marked Read");
     }
   });
 });
