@@ -38,26 +38,11 @@ a {
 
 /* scrollbar */
 
-/* firefox */
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--grayish-blue) var(--white);
-}
-
-/* chromium based browsers */
-
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--white);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--grayish-blue);
-  border: 10px;
+@supports (scrollbar-width: thin) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--grayish-blue) var(--white);
+  }
 }
 
 /* body */
