@@ -94,7 +94,7 @@ body {
   font-weight: 700;
 }
 
-.unread-num {
+.unread-count {
   color: var(--white);
   font-weight: 700;
   padding: 4px 15px 5px 15px;
