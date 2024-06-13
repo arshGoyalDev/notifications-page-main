@@ -8,7 +8,6 @@ notiSet.forEach((noti) => {
       let readMarker = document.querySelector(`#${noti.id} .unread-marker`);
 
       noti.classList.remove("unread");
-      noti.classList.add("read");
       readMarker.classList.remove("unread");
     } else {}
   });

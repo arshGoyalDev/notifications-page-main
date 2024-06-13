@@ -136,14 +136,13 @@ body {
   display: flex;
   gap: 20px;
   padding: 20px;
-  background: var(--very-light-grayish-blue);
   border-radius: 10px;
   transition: 0.3s;
   cursor: default;
 }
 
-.notification.read {
-  background: transparent;
+.notification.unread {
+  background: var(--very-light-grayish-blue);
 }
 
 .user-image img {
