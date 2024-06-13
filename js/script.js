@@ -10,7 +10,6 @@ notiSet.forEach((noti) => {
       noti.classList.remove("unread");
       noti.classList.add("read");
       readMarker.classList.remove("unread");
-      readMarker.classList.add("read");
     } else {}
   });
 });

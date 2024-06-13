@@ -192,11 +192,13 @@ body {
   background: var(--red);
   border-radius: 20px;
   margin: 0 0 2px 5px;
-}
-
-.unread-marker.read {
   opacity: 0;
   visibility: hidden;
+}
+
+.unread-marker.unread {
+  opacity: 1;
+  visibility: visible;
 }
 
 .noti-time {
